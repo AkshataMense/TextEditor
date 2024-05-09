@@ -5,7 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Text Editor</title>
 	<style type="text/css">
+	*{
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+	}
 	    .heading{
+	    	margin-top: 10px; 
 	    	font-size: 50px;
 	    	font-weight: bolder;
 	    	color: royalblue;
@@ -47,7 +53,7 @@
 			<form class="textform">
 				<label>Enter text below</label>
 				<br><br>
-				<textarea autofocus rows="10" cols="90" id="usertext"></textarea>
+				<textarea autofocus rows="10" cols="70" id="usertext"></textarea>
 				<br><br>
 				<button type="button" onclick="transformToUpperCase()">UPPERCASE</button>
 				<button type="button" onclick="transformToLowerCase()">LOWERCASE</button>
