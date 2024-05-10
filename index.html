@@ -61,6 +61,7 @@
 				<button type="button" onclick="searchText()">SEARCH TEXT</button>
 				<button type="button" onclick="changeTextColor()">CHANGE COLOR</button><br>
 				<button type="button" onclick="textAlign()">TEXT ALIGN</button>
+				<button type="button" onclick="fontFamily()">FONT FAMILY</button>
 				<br>
 				<h2 id="op"></h2>
 			</form>
@@ -96,7 +97,12 @@
 		}
 		function textAlign(){
 			let text = document.getElementById("usertext");
-			text.style.textAlign=prompt("Enter a position where you want to move the text")
+			text.style.textAlign=prompt("Enter a position where you want to move the text");
+		}
+
+		function fontFamily(){
+			let text = document.getElementById("usertext");
+			text.style.fontFamily=prompt("Enter font family");
 		}
 
 	</script>
