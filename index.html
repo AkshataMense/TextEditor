@@ -40,7 +40,8 @@
 	    	background-color: royalblue;
 	    	color: white;
 	    	border-radius: 13px;
-	    	/font-weight: bolder;/
+	    	font-weight: bolder;
+	    	margin-top: 10px;
 
 	    }
 
@@ -53,14 +54,15 @@
 			<form class="textform">
 				<label>Enter text below</label>
 				<br><br>
-				<textarea autofocus rows="10" cols="70" id="usertext"></textarea>
+				<textarea autofocus rows="10" cols="70" id="usertext" onkeypress="updateTextInfo()"></textarea>
 				<br><br>
 				<button type="button" onclick="transformToUpperCase()">UPPERCASE</button>
 				<button type="button" onclick="transformToLowerCase()">LOWERCASE</button>
 				<button type="button" onclick="searchText()">SEARCH TEXT</button>
 				<button type="button" onclick="changeTextColor()">CHANGE COLOR</button><br>
+				<button type="button" onclick="textAlign()">TEXT ALIGN</button>
 				<br>
-				<h2 id="op">This text contains 2 words and 5 characters</h2>
+				<h2 id="op"></h2>
 			</form>
 		</div>
 		
@@ -68,8 +70,8 @@
 	<script type="text/javascript">
 		function updateTextInfo(){
 			let text = document.getElementById("usertext").value;
-			let wrds=text.spilt("").length-1;
-			document.getElementById("op").innerHTML = "This text contains"+wrds+"words and "+text.length+"characters."
+			let wrds=text.split("").length-1;
+			document.getElementById("op").innerHTML = "This text contains "+wrds+" words and "+text.length+" characters."
 		}
 		function transformToUpperCase() {
 			let text=document.getElementById('usertext');
@@ -91,6 +93,10 @@
 		function changeTextColor(){
 			let text=document.getElementById("usertext");
 			text.style.color=prompt("Enter a color:");
+		}
+		function textAlign(){
+			let text = document.getElementById("usertext");
+			text.style.textAlign=prompt("Enter a position where you want to move the text")
 		}
 
 	</script>
